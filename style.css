@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #8e44ad, #c0392b, #f39c12, #2980b9);
+    background-size: 400% 400%;
+    animation: bgAnimation 6s ease infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .timeline-item {
+        min-width: auto; /* Remove min-width for mobile */
+        margin-bottom: 1rem; /* Add spacing between items */
+    }
+
+    .heart-container {
+        width: 80px; /* Smaller heart for mobile */
+        height: 80px;
+    }
+
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 769px) {
+    .timeline-container {
+        flex-direction: row; /* Keep items in a row */
+    }
+
+    .heart-container {
+        width: 120px; /* Larger heart for desktop */
+        height: 120px;
+    }
+
+    .heart {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Keyframes and other styles remain unchanged */
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Love Timeline Styles */
+.magical-heading {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 2rem;
+}
+
+.heading-main {
+    font-size: 3.5rem;
+    color: #FF0000;  /* Red color */
+    text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000;  /* Reduced glow effect */
+    background: linear-gradient(45deg, #FF1493, #FF69B4, #FFB6C1, #FF1493);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 5s ease infinite;
+    margin-bottom: 1rem;
+}
+
+.heading-subtitle {
+    font-size: 1.8rem;
+    color: #FF69B4;
+    animation: float 3s ease-in-out infinite;
+}
+
+.timeline-container {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.timeline {
+    display: flex;
+    gap: 4rem;
+    padding: 2rem 4rem;
+    position: relative;
+}
+
+.timeline-item {
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.7);
+}
+
+.timeline-item h3 {
+    color: #FF1493;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Additional styles remain unchanged */
