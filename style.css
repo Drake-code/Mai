@@ -434,3 +434,24 @@ button:hover {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+    .sub-title {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    .timeline-item {
+        min-width: 100%; /* Make timeline items full width */
+    }
+    .timeline {
+        flex-direction: column; /* Stack timeline items vertically */
+        gap: 2rem; /* Adjust gap for vertical layout */
+    }
+    .heart {
+        width: 80px; /* Adjust heart size for smaller screens */
+        height: 80px; /* Adjust heart size for smaller screens */
+    }
+}
