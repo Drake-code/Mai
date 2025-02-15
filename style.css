@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    overflow: auto; /* Changed from hidden to auto to allow scrolling */
+    overflow-x: hidden; /* Prevent horizontal overflow */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ body {
     gap: 4rem;
     padding: 2rem 4rem;
     position: relative;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .timeline-item {
@@ -74,6 +75,7 @@ body {
     position: relative;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+    flex: 1 1 45%; /* Allow items to grow and shrink */
 }
 
 .timeline-item:hover {
@@ -445,6 +447,7 @@ button:hover {
     }
     .timeline-item {
         min-width: 100%; /* Make timeline items full width */
+        flex: 1 1 100%; /* Ensure items take full width */
     }
     .timeline {
         flex-direction: column; /* Stack timeline items vertically */
@@ -453,5 +456,8 @@ button:hover {
     .heart {
         width: 80px; /* Adjust heart size for smaller screens */
         height: 80px; /* Adjust heart size for smaller screens */
+    }
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
     }
 }
